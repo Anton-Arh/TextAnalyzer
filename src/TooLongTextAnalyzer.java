@@ -1,6 +1,7 @@
 public class TooLongTextAnalyzer implements TextAnalyzer {
+    private int maxLength;
 
-    public TooLongTextAnalyzer(int MaxLength) {
+    public TooLongTextAnalyzer(int maxLength) {
     }
 
     @Override
@@ -8,3 +9,5 @@ public class TooLongTextAnalyzer implements TextAnalyzer {
         return null;
     }
 }
+
+

@@ -1,8 +1,15 @@
 public abstract class KeywordAnalyzer implements TextAnalyzer {
-    protected abstract void getKeywords();
-    protected abstract void getLabel();
+    protected abstract String[] getKeywords();
+    protected abstract Label getLabel();
+
     @Override
     public Label processText(String text) {
-        return null;
+        String[] keyWords = getKeywords();
+        for (String keyWord : keyWords) {
+            if (text.contains(keyWord)){
+                return getLabel();
+            }
+        }
+        return Label.OK;
     }
 }

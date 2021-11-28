@@ -1,16 +1,17 @@
 public class SpamAnalyzer extends KeywordAnalyzer{
+    private String keywords;
 
-    public SpamAnalyzer(String[] Keywords) {
+    public SpamAnalyzer(String[] keywords) {
         super();
     }
 
     @Override
-    protected void getKeywords() {
-
+    protected String[] getKeywords() {
+        return new String[0];
     }
 
     @Override
-    protected void getLabel() {
-
+    protected Label getLabel() {
+        return null;
     }
 }

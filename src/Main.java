@@ -2,35 +2,35 @@ public class Main {
     public static void main(String[] args) {
         // инициализация анализаторов для проверки в порядке данного набора анализаторов
         String[] Keywords = {"spam", "bad"};
-        int MaxLength = 40;
+        int maxLength = 40;
         TextAnalyzer[] textAnalyzers1 = {
                 new SpamAnalyzer(Keywords),
                 new NegativeTextAnalyzer(),
-                new TooLongTextAnalyzer(MaxLength)
+                new TooLongTextAnalyzer(maxLength)
         };
         TextAnalyzer[] textAnalyzers2 = {
                 new SpamAnalyzer(Keywords),
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new NegativeTextAnalyzer()
         };
         TextAnalyzer[] textAnalyzers3 = {
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new SpamAnalyzer(Keywords),
                 new NegativeTextAnalyzer()
         };
         TextAnalyzer[] textAnalyzers4 = {
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new NegativeTextAnalyzer(),
                 new SpamAnalyzer(Keywords)
         };
         TextAnalyzer[] textAnalyzers5 = {
                 new NegativeTextAnalyzer(),
                 new SpamAnalyzer(Keywords),
-                new TooLongTextAnalyzer(MaxLength)
+                new TooLongTextAnalyzer(maxLength)
         };
         TextAnalyzer[] textAnalyzers6 = {
                 new NegativeTextAnalyzer(),
-                new TooLongTextAnalyzer(MaxLength),
+                new TooLongTextAnalyzer(maxLength),
                 new SpamAnalyzer(Keywords)
         };
         // тестовые комментарии

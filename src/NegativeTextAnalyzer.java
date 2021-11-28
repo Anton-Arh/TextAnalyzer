@@ -1,12 +1,13 @@
 public class NegativeTextAnalyzer extends KeywordAnalyzer{
 
-    @Override
-    protected void getKeywords() {
 
+    @Override
+    protected String[] getKeywords() {
+        return new String[0];
     }
 
     @Override
-    protected void getLabel() {
-
+    protected Label getLabel() {
+        return null;
     }
 }
